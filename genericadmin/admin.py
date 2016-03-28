@@ -9,7 +9,6 @@ except ImportError:
 from django.contrib import admin
 from django.conf.urls import patterns, url
 from django.conf import settings
-from django.contrib.contenttypes import generic
 from django.contrib.contenttypes.models import ContentType
 try:
     from django.utils.encoding import force_text 
