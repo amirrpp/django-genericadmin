@@ -28,7 +28,8 @@ setup(
         'Programming Language :: Python',
         'Framework :: Django',
     ],
-    long_description=convert_readme(),
+#    long_description=convert_readme(),
+    long_description='',
     include_package_data=True,
     zip_safe=False,
 )
