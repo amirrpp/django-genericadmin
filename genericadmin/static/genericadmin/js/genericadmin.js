@@ -12,8 +12,8 @@
     var GenericAdmin = {
         url_array: null,
         fields: null,
-        obj_url: "../obj-data/",
-        admin_media_url: window.__admin_media_prefix__,
+        obj_url: "../../obj-data/",
+        admin_media_url: '/static/admin/', /* bug */
 		popup: '_popup',
         
         prepareSelect: function(select) {
@@ -73,7 +73,7 @@
         },
         
         getLookupUrl: function(cID) {
-            return '../../../' + this.url_array[cID][0] + '/' + this.getLookupUrlParams(cID);
+            return '../../../../' + this.url_array[cID][0] + '/' + this.getLookupUrlParams(cID);
         },
         
         getFkId: function() {
@@ -306,7 +306,7 @@
 
     $(document).ready(function() {
         $.ajax({
-            url: '../genericadmin-init/',
+            url: '../../genericadmin-init/',
             dataType: 'json',
             success: function(data) {
                 var url_array = data.url_array,
